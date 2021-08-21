@@ -1,3 +1,4 @@
+//update memory cost funtion 
 function updateMemoryCost(product, isTrue) {
 
     const memoryCostInput = document.getElementById(product + '-cost');
@@ -11,6 +12,7 @@ function updateMemoryCost(product, isTrue) {
     memoryCostInput.innerText = memoryCost;
     calculateTotal();
 }
+//update storage cost funtion 
 function updateStorageCost(product, storage) {
 
     const storageCostInput = document.getElementById(product + '-cost');
@@ -27,6 +29,7 @@ function updateStorageCost(product, storage) {
     storageCostInput.innerText = storageCost;
     calculateTotal();
 }
+//update delivery cost funtion 
 function updateDeliveryCost(product, delivery) {
 
     const deliveryCostInput = document.getElementById(product + '-cost');
@@ -40,7 +43,7 @@ function updateDeliveryCost(product, delivery) {
     deliveryCostInput.innerText = deliveryCost;
     calculateTotal();
 }
-
+//Get Input value 
 function getInputValue(product) {
     const productInput = document.getElementById(product + '-cost');
     const productCost = parseInt(productInput.innerText);
@@ -61,6 +64,7 @@ function discountTotal() {
     const total = document.getElementById('discount-price');
     const totalCost = parseInt(total.innerText);
     const promoInput = document.getElementById('promo-code');
+    // check the promo code
     if (promoInput.value == 'stevekaku') {
         const discountFinal = totalCost * 0.8;
         total.innerText = discountFinal;
